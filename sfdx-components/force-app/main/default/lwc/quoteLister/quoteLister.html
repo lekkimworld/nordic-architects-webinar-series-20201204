@@ -1,0 +1,16 @@
+<template>
+  <template if:true={quotes}>
+    <lightning-card title="Quotes [Download]">
+      <lightning-button label="Refresh" slot="actions" onclick={refreshList}></lightning-button>
+      <p class="slds-p-horizontal_small">
+        <lightning-datatable
+          key-field="Id"
+          data={quotes}
+          columns={columns}
+          hide-checkbox-column
+        >
+        </lightning-datatable>
+      </p>
+    </lightning-card>
+  </template>
+</template>

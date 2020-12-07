@@ -1,0 +1,2 @@
+select id, name, Email__c, FirstName__c, LastName__c, contactid, accountid, LiveCHatVisitorId, createddate from LiveChatTranscript where id = '57009000000D6aXAAS'
+

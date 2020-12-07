@@ -1,0 +1,19 @@
+<template>
+    <template if:true={quote}>
+        <lightning-card  title={pagetitle}>
+            <lightning-button label="Send" slot="actions" onclick={send}></lightning-button>
+            <p class="slds-p-horizontal_small">
+                <lightning-input-rich-text value={html} label="Body of the email" onchange={htmlchange}></lightning-input-rich-text>
+                <template if:true={files}>
+                    <lightning-datatable
+                        key-field="ContentVersionDocumentId"
+                        data={files}
+                        columns={columns}
+                        selected-rows={preSelectedRows}>
+                    </lightning-datatable>
+                </template>
+            </p>
+            <p slot="footer">Quote will be send to {email}</p>
+        </lightning-card>
+    </template>
+</template>

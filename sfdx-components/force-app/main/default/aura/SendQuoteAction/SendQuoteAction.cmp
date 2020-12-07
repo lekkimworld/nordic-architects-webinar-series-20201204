@@ -1,0 +1,4 @@
+<aura:component  implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:attribute name="recordId" type="String" />
+    <c:SendQuote recordId="{!v.recordId}" onclose="{!c.closeMethodInAuraController}"></c:SendQuote>
+</aura:component>	

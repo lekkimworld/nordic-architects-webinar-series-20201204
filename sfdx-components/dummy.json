@@ -1,0 +1,53 @@
+{
+    "data": {
+        "apiName": "Quote",
+        "childRelationships": {},
+        "id": "0Q009000000Csq2CAC",
+        "lastModifiedById": "00509000001UPBVAA4",
+        "lastModifiedDate": "2020-11-24T11:38:39.000Z",
+        "recordTypeId": "012000000000000AAA",
+        "recordTypeInfo": null,
+        "systemModstamp": "2020-11-24T11:38:39.000Z",
+        "fields": {
+            "AccountId": {
+                "displayValue": null,
+                "value": "001090000059gH6AAI"
+            },
+            "Contact": {
+                "displayValue": "Johan Neidenmark",
+                "value": {
+                    "apiName": "Contact",
+                    "childRelationships": {},
+                    "id": "00309000003THOBAA4",
+                    "lastModifiedById": "00509000001UPBVAA4",
+                    "lastModifiedDate": "2020-11-24T07:36:57.000Z",
+                    "recordTypeId": "012000000000000AAA",
+                    "recordTypeInfo": null,
+                    "systemModstamp": "2020-11-24T07:36:57.000Z",
+                    "fields": {
+                        "Email": {
+                            "displayValue": null,
+                            "value": "johan@neidenmark.se"
+                        },
+                        "Name": {
+                            "displayValue": null,
+                            "value": "Johan Neidenmark"
+                        }
+                    }
+                }
+            },
+            "Email": {
+                "displayValue": null,
+                "value": "neiden@gmail.com"
+            },
+            "Name": {
+                "displayValue": null,
+                "value": "Test Quote 1"
+            },
+            "QuoteNumber": {
+                "displayValue": null,
+                "value": "00000001"
+            }
+        }
+    }
+}

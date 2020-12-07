@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Generate_PDF</name>
+        <label>Generate PDF</label>
+        <locationX>176</locationX>
+        <locationY>314</locationY>
+        <actionName>quotegen.quotepdf</actionName>
+        <actionType>externalService</actionType>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>quotegen_output</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <name>Set_Quote_ID</name>
+        <label>Set Quote ID</label>
+        <locationX>176</locationX>
+        <locationY>194</locationY>
+        <assignmentItems>
+            <assignToReference>quotegen_output.quoteId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Quote_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Generate_PDF</targetReference>
+        </connector>
+    </assignments>
+    <interviewLabel>Process Request Quote PDF Creation event {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Process Request Quote PDF Creation event</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Quote_ID</targetReference>
+        </connector>
+        <object>Request_Quote_PDF_Creation__e</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>quotegen_output</name>
+        <apexClass>ExternalService__quotegen_Quote</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
