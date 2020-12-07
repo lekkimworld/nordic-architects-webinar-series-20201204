@@ -1,0 +1,3 @@
+<design:component label="Quote Generator Canvas App">
+    <design:attribute name="appName" label="App. Developer Name" description="Connected App Developer Name" />
+</design:component>

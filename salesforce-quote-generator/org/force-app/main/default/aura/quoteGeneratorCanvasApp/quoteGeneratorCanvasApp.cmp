@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="appName" type="string" />
+    <aura:attribute name="canvasParameters" type="string" />
+
+    <aura:if isTrue="{!v.canvasParameters}">
+        <force:canvasApp developerName="{!v.appName}" parameters="{!v.canvasParameters}">
+        </force:canvasApp>
+    </aura:if>
+
+</aura:component>
